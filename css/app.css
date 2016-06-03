@@ -106,9 +106,26 @@ a {
   margin-right: auto;
 }
 
+.view-on-github-container {
+  display: block;
+  text-align: center;
+}
+
+.view-on-github {
+  margin-top: 32px;
+}
+
 .phone {
   margin-top: 64px;
   max-width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.web {
+  margin-top: 64px;
+  max-width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -151,6 +168,10 @@ a {
   }
 
   .appstore-badge {
+    display: inline;
+  }
+
+  .view-on-github-container {
     display: inline;
   }
 }

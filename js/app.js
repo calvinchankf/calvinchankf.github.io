@@ -19,7 +19,7 @@ $(function(){
     headers.eq(nextIdx).fadeIn(1500, function() {
       currentHeaderIdx = nextIdx;
     });
-  }, 3000);
+  }, 2000);
 
   // viewDidLoad
   headers.eq(1).hide();
