@@ -97,6 +97,11 @@ a {
   text-align: center;
 }
 
+.project-summary {
+  text-align: center;
+  font-weight: 600;
+}
+
 .appstore-badge {
   margin-top: 32px;
   height: 40px;
@@ -164,6 +169,10 @@ a {
   .project-desc {
     font-size: 1.2em;
     line-height: 1.0;
+    text-align: left;
+  }
+
+  .project-summary {
     text-align: left;
   }
 
