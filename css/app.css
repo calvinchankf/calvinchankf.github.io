@@ -2,10 +2,8 @@ body {
   height: 100%;
   width: 100%;
   margin: 0px;
-  font-family: 'Poiret One', cursive;
-  /*font-weight: 100;*/
-  /*letter-spacing: 0rem;*/
   color: #646464;
+  font-family: 'Ek Mukta', sans-serif;
   background-color: #F4F4F4;
 }
 
@@ -83,27 +81,26 @@ a {
 }
 
 .project-title {
-  margin-top: 64px;
+  margin-top: 32px;
   font-size: 1.6em;
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
 }
 
 .project-desc {
   margin-top: 32px;
   font-size: 1em;
-  line-height: 1.2;
-  text-align: center;
+  line-height: 2;
+  text-align: left;
 }
 
 .project-summary {
-  text-align: center;
+  text-align: left;
   font-weight: 600;
 }
 
 .appstore-badge {
-  margin-top: 32px;
   height: 40px;
   max-width: 100%;
   display: block;
@@ -167,8 +164,8 @@ a {
   }
 
   .project-desc {
-    font-size: 1.2em;
-    line-height: 1.0;
+    font-size: 1.0em;
+    line-height: 1.6;
     text-align: left;
   }
 
