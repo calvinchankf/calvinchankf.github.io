@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Your Name</title>
+    <meta name="description" content="Personal blog posts and articles">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="index.html">Calvin Chan</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="blog-header">
+                <h1>Blog</h1>
+                <p>Thoughts, insights, and experiences from my journey in tech</p>
+            </div>
+
+            <div class="blog-posts">
+
+                <article class="blog-post">
+                    <h2><a href="https://medium.com/@CalvinChankf/letter-combinations-of-a-phone-number-8d6b5cba917f" target="_blank">Letter Combinations of a Phone Number</a></h2>
+                    <p class="post-meta">Jan 5, 2019 • 3 min read</p>
+                    <p class="post-excerpt">
+                        Two years ago, during a FAANG coding interview, I was asked to print all the possible letter combinations of a phone number. I tried very hard during the interview but I gave up eventually. Today, I go over the question again and walk through on how we could do it.
+                    </p>
+                </article>
+
+                <article class="blog-post">
+                    <h2><a href="https://medium.com/@CalvinChankf/a-general-approach-for-subsets-combinations-and-permutations-5c8fe3aff0ae" target="_blank">A general approach to Subsets, Combinations, and Permutations</a></h2>
+                    <p class="post-meta">Jan 5, 2019 • 3 min read</p>
+                    <p class="post-excerpt">
+                        Recently, I found that there are 5 questions on leetcode look very similar and I am going to discuss today and my way to solve the questions.
+                    </p>
+                </article>
+
+                <article class="blog-post">
+                    <h2><a href="https://medium.com/@CalvinChankf/a-trick-to-play-a-landscape-video-in-a-portrait-viewcontroller-regardless-of-orientation-lock-d5d2d635d47e" target="_blank">A Trick to Play a Landscape Video in a Portrait ViewController Regardless of Orientation Lock</a></h2>
+                    <p class="post-meta">Jun 22, 2016 • 3 min read</p>
+                    <p class="post-excerpt">
+                        If your ViewController(which plays videos) can be in both portrait and landscape, I strongly recommend that to do it with AutoLayout and ignore this post. But if you wanna know how to do it with AutoLayout as well, checkout out my repo, change the storyboard entry point to RotatingViewController
+                    </p>
+                </article>
+
+                <article class="blog-post">
+                    <h2><a href="https://medium.com/@CalvinChankf/the-simplest-way-to-make-a-pull-to-refresh-and-infinite-tableview-with-reactjs-18ecf85429ea" target="_blank">The simplest way to make a pull-to-refresh and infinite tableview with ReactJS</a></h2>
+                    <p class="post-meta">Jun 2, 2016 • 3 min read</p>
+                    <p class="post-excerpt">
+                        Pull-to-refresh and pull-to-load-more are extremely common to show data in web, there are so many libraries to make it in React, but there are some problems 😩
+                    </p>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://github.com/calvinchankf" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://linkedin.com/in/calvinchankf" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="mailto:contact@calvinchankf.com">Email</a>
+                </div>
+                <p>&copy; 2025 Calvin Chan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
