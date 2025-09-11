@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Modern Web Development - Your Name</title>
+    <meta name="description" content="An introduction to modern web development practices, tools, and frameworks">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="../index.html">Calvin Chan</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <article class="article">
+                <header class="article-header">
+                    <h1 class="article-title">Facebook Internal Tools</h1>
+                    <p class="article-meta">Published on Jun 1, 2022 • 5 min read</p>
+                    <p>Today marked my 1-year anniversary at Facebook, this year I really learned a lot on technical side as there are tons of internal tools that I never seen them before and surprised how smart the early-stage fb engineers who built them, everyone of those are alternatives to the companies outside worth a multi-hundred millions if not a billion product/service.</p>
+                </header>
+
+                <div class="article-content">
+                    <h3>Phabricator</h3>
+                    <p>
+                        Facebook's long-standing internal suite for code reviews, bug tracking, repository browsing...etc. Essentially it is Github. It includes components like Differential (code review), Maniphest (bug tracker), Herald (change monitoring), and Phriction (wiki), also most importantly the deployment status of the diffs which is much better than any similar tools externally which connected to Github <a href="https://engineering.fb.com/2012/07/06/web/under-the-hood-timeline-apps-behind-facebook-engineering/" target="_blank" rel="noopener noreferrer">@https://engineering.fb.com/2012/07/06/web/under-the-hood-timeline-apps-behind-facebook-engineering/</a>
+                    </p>
+
+                    <h3>Mercurial</h3>
+                    <p>
+                        It is essentially Git. Facebook chose Mercurial (hg) over Git to manage its massive monorepo, because back in the day ~15 years ago, Git struggled with performance at Facebook's scale (millions of commits, hundreds of GBs every day). So early-stage fb engineers forked it and leveraged its distributed versioning nature to optimize engineers' productivity <a href="https://engineering.fb.com/2014/01/07/core-infra/scaling-mercurial-at-facebook/" target="_blank" rel="noopener noreferrer">@https://engineering.fb.com/2014/01/07/core-infra/scaling-mercurial-at-facebook/</a>
+                    </p>
+
+                    <h3>Scuba</h3>
+                    <p>
+                        A distributed in-memory analytics platform built for real-time, ad-hoc querying of log data and other streams. Accessible via its web UI or SQL-like interface for rapid debugging and trend analysis. <a href="https://research.facebook.com/publications/scuba-diving-into-data-at-facebook/" target="_blank" rel="noopener noreferrer">@https://research.facebook.com/publications/scuba-diving-into-data-at-facebook/</a>
+                    </p>
+
+                    <h3>Daiquery</h3>
+                    <p>
+                        Daiquery is a web-based notebook tool used to query data warehouses (via Presto/Spark), Scuba, and more — with visualization support. <a href="https://medium.com/%40AnalyticsAtMeta/data-engineering-at-meta-high-level-overview-of-the-internal-tech-stack-a200460a44fe" target="_blank" rel="noopener noreferrer">@https://medium.com/@AnalyticsAtMeta/data-engineering-at-meta-high-level-overview-of-the-internal-tech-stack-a200460a44fe</a>
+                    </p>
+
+                    <h3>Unidash</h3>
+                    <p>
+                        An internal dashboard platform (like Superset or Tableau) that integrates with Daiquery. It facilitates interactive, high-level visualizations with support for programmatic dashboard creation and underlying pre-aggregation support (via RaptorX extension). <a href="https://medium.com/%40AnalyticsAtMeta/data-engineering-at-meta-high-level-overview-of-the-internal-tech-stack-a200460a44fe" target="_blank" rel="noopener noreferrer">@https://medium.com/@AnalyticsAtMeta/data-engineering-at-meta-high-level-overview-of-the-internal-tech-stack-a200460a44fe</a>
+                    </p>
+
+                    <h3>Bento</h3>
+                    <p>
+                        Bento builds on Daiquery, acting as a managed Jupyter notebook environment with Python, R, and rich visualisation capabilities used by data scientists and ML engineers. <a href="https://medium.com/%40AnalyticsAtMeta/data-engineering-at-meta-high-level-overview-of-the-internal-tech-stack-a200460a44fe" target="_blank" rel="noopener noreferrer">@https://medium.com/@AnalyticsAtMeta/data-engineering-at-meta-high-level-overview-of-the-internal-tech-stack-a200460a44fe</a>
+                    </p>
+
+                    <h3>ZippyDB</h3>
+                    <p>
+                        It is a highly scalable distributed key-value datastore managed as a service. It is essentially DynamoDB on AWS. <a href="https://engineering.fb.com/2021/08/06/core-infra/zippydb/" target="_blank" rel="noopener noreferrer">@https://engineering.fb.com/2021/08/06/core-infra/zippydb/</a>
+                    </p>
+
+                    <h3>Thrift</h3>
+                    <p>
+                        A RPC framework originally developed at Facebook back in 2007, later open-sourced under Apache. It is essentially gRPC and engineers use it to communicate between internal backend services <a href="https://github.com/facebook/fbthrift" target="_blank" rel="noopener noreferrer">@https://github.com/facebook/fbthrift</a>
+                    </p>
+
+                    <h3>Pixelcloud</h3>
+                    <p>
+                        An internal tool for uploading, sharing, tagging, and commenting on mockups and screenshots without compression—widely used by designers and engineers to collaborate visually. <a href="https://engineering.fb.com/2012/07/06/web/under-the-hood-timeline-apps-behind-facebook-engineering" target="_blank" rel="noopener noreferrer">@https://engineering.fb.com/2012/07/06/web/under-the-hood-timeline-apps-behind-facebook-engineering/</a>
+                    </p>
+                    
+                    <h3>Relay</h3>
+                    <p>
+                        It is facebook's version of GraphQL. Powers Facebook web apps, Instagram web, Workplace, etc. Relay ensures UI → GraphQL backend is efficient at massive scale (billions of queries). <a href="https://github.com/facebook/relay" target="_blank" rel="noopener noreferrer">@https://github.com/facebook/relay</a>
+                    </p>
+
+                    <h3>Flow</h3>
+                    <p>
+                        It is facebook's approach of using Javascript with types. A static type checker for JavaScript. It adds optional type annotations to JS, giving devs type safety without full TypeScript migration. Widely used across Facebook and Instagram frontend code. Overlaps with TypeScript in functionality, but Facebook invested heavily in Flow to scale existing codebases before TS was popular. <a href="https://github.com/facebook/flow" target="_blank" rel="noopener noreferrer">@https://github.com/facebook/flow</a>
+                    </p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="mailto:your.email@example.com">Email</a>
+                </div>
+                <p>&copy; 2024 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script src="../script.js"></script>
+</body>
+</html>
