@@ -69,6 +69,31 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
     
+    // Profile picture fade in/out on scroll
+    const profilePic = document.querySelector('.profile-pic');
+    const fadeStart = 50; // Scroll position to start fading out
+    const fadeEnd = 300; // Scroll position where profile pic is fully faded out
+
+    function handleProfilePicScroll() {
+        const scrollY = window.pageYOffset;
+
+        if (scrollY <= fadeStart) {
+            // Fully visible at or before fadeStart
+            profilePic.style.opacity = '1';
+        } else if (scrollY >= fadeEnd) {
+            // Fully faded out at or after fadeEnd
+            profilePic.style.opacity = '0';
+        } else {
+            // Fade gradually between fadeStart and fadeEnd
+            const opacity = 1 - ((scrollY - fadeStart) / (fadeEnd - fadeStart));
+            profilePic.style.opacity = opacity.toString();
+        }
+    }
+
+    window.addEventListener('scroll', handleProfilePicScroll);
+    // Call once on load to set initial state
+    handleProfilePicScroll();
+    
     // Mobile menu toggle (if needed in the future)
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
