@@ -111,7 +111,7 @@ body {
 .hero {
     padding: 4rem 0 3rem;
     text-align: center;
-    background-image: url('static/hongkong.jpeg');
+    background-image: url('static/hongkong.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -130,7 +130,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background-color: rgba(0, 0, 0, var(--hero-overlay-opacity)); /* Dark overlay controlled by JS */
     z-index: 1;
 }
 
@@ -149,7 +149,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: var(--color-accent);
+    color: var(--color-text-lightest);
     margin-bottom: 1.5rem;
     font-weight: 500;
 }

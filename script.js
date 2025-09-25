@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Profile picture fade in/out on scroll
     const profilePic = document.querySelector('.profile-pic');
-    const fadeStart = 50; // Scroll position to start fading out
+    const fadeStart = 0; // Scroll position to start fading out
     const fadeEnd = 300; // Scroll position where profile pic is fully faded out
 
     function handleProfilePicScroll() {
@@ -93,6 +93,32 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', handleProfilePicScroll);
     // Call once on load to set initial state
     handleProfilePicScroll();
+    
+    // Hero background image overlay fade on scroll
+    const heroSection = document.querySelector('.hero');
+    const overlayFadeStart = 0; // Scroll position to start darkening
+    const overlayFadeEnd = 600; // Scroll position where overlay is fully dark
+    const maxOverlayOpacity = 0.9; // Maximum opacity for the dark overlay
+
+    function handleHeroOverlayScroll() {
+        const scrollY = window.pageYOffset;
+
+        if (scrollY <= overlayFadeStart) {
+            // Overlay is fully transparent at or before overlayFadeStart
+            heroSection.style.setProperty('--hero-overlay-opacity', '0');
+        } else if (scrollY >= overlayFadeEnd) {
+            // Overlay is fully dark at or after overlayFadeEnd
+            heroSection.style.setProperty('--hero-overlay-opacity', maxOverlayOpacity.toString());
+        } else {
+            // Fade gradually between overlayFadeStart and overlayFadeEnd
+            const opacity = (scrollY - overlayFadeStart) / (overlayFadeEnd - overlayFadeStart) * maxOverlayOpacity;
+            heroSection.style.setProperty('--hero-overlay-opacity', opacity.toString());
+        }
+    }
+
+    window.addEventListener('scroll', handleHeroOverlayScroll);
+    // Call once on load to set initial state
+    handleHeroOverlayScroll();
     
     // Mobile menu toggle (if needed in the future)
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
